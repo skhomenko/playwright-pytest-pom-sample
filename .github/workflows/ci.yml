@@ -21,7 +21,7 @@ jobs:
 
       - name: Build test container image
         run: |
-          make a
+          make build
 
       - name: Run chromium tests
         run: |
