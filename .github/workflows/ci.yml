@@ -25,8 +25,8 @@ jobs:
 
       - name: Run chromium tests
         run: |
-          make run-run-all-chromium-tests-tests
+          make run-all-chromium-tests-tests
 
       - name: Run firefox tests
         run: |
-          make run-run-all-firefox-tests-tests
+          make run-all-firefox-tests-tests
