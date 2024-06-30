@@ -19,6 +19,14 @@ jobs:
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v1
 
-      - name: Build test container image and run tests
+      - name: Build test container image
         run: |
-          make all
+          make a
+
+      - name: Run chromium tests
+        run: |
+          make run-all-chromium-tests
+
+      - name: Run firefox tests
+        run: |
+          make run-all-firefox-tests
