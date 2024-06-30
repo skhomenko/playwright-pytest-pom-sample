@@ -8,7 +8,8 @@ from infrastructure import pages as p
 
 load_dotenv()
 
-HEADLESS = bool(int(environ.get("HEADLESS")))
+# HEADLESS = bool(int(environ.get("HEADLESS")))
+HEADLESS = True
 
 
 @pytest.fixture(scope="session")

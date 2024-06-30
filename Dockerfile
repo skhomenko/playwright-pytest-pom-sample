@@ -6,7 +6,8 @@ WORKDIR /home
 
 RUN adduser --disabled-password --gecos '' pwuser
 
-COPY requirements.txt .env.example /home/
+COPY requirements.txt /home/requirements.txt
+COPY .env.example /home/.env
 
 RUN apt-get update && \
     apt-get install -y --no-install-recommends libzbar0 && \
