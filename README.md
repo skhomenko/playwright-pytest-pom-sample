@@ -28,4 +28,3 @@ make run-all-chromium-tests
 ```sh
 make run-all-firefox-tests
 ```
-

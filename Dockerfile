@@ -12,10 +12,11 @@ COPY .env.example /home/.env
 RUN apt-get update && \
     apt-get install -y --no-install-recommends libzbar0 && \
     rm -rf /var/lib/apt/lists/* && \
-    pip install --no-cache-dir -r requirements.txt && \
+    pip install --no-cache-dir -r /home/requirements.txt && \
     rm -rf /home/requirements.txt
 
 ENV PLAYWRIGHT_BROWSERS_PATH=/ms-playwright
+ENV HEADLESS=1
 
 RUN mkdir /ms-playwright /ms-playwright-agent && \
     cd /ms-playwright-agent && \
